@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const headers = {
-  Authorization: "Bearer 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",
+  Authorization: `Bearer ${process.env.token}`,
   "User-Agent": "RhythmS00d",
   Accept: "application/vnd.github+json",
   "X-GitHub-Api-Version": "2022-11-28",
@@ -10,7 +10,7 @@ const headers = {
 
 export const fetchRepos = async () => {
   return await axios
-    .get(`https://api.github.com/users/RhythmS00d/repos`, {
+    .get(`https://api.github.com/users/${process.env.username}/repos`, {
       headers: headers,
     })
     .then((result) =>

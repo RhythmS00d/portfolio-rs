@@ -29,7 +29,7 @@ export const Card = ({
           <Link
             target="_blank"
             href={homepage}
-            className="text-lg font-semibold"
+            className="text-lg font-semibold line-clamp-1"
           >
             {children}
           </Link>

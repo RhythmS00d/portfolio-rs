@@ -33,31 +33,37 @@ const Menu = ({
   );
 };
 
-const Overlay = ({ showMenu }: { showMenu: boolean }) => {
+const Overlay = ({ showMenu, setShowMenu }: { showMenu: boolean; setShowMenu: (value: boolean) => void; }) => {
   return (
     <section
       className={
         "absolute h-1/4 bg-secondary w-[60%] right-0 z-10 top-[112px] origin-top-right " +
         `${
-          showMenu
-            ? "scale-100 animate-openMenu"
-            : "scale-0 animate-closeMenu"
+          showMenu ? "scale-100 animate-openMenu" : "scale-0 animate-closeMenu"
         }`
       }
     >
       <nav id="nav-menu" className="absolute top-6 right-5">
         <ul className="flex flex-col gap-6 font-bold text-xl text-right">
           <li>
-            <Link href="/">Home -</Link>
+            <Link href="/" onClick={() => setShowMenu(!showMenu)}>
+              Home -
+            </Link>
           </li>
           <li>
-            <Link href="/experience">Experience -</Link>
+            <Link href="/experience" onClick={() => setShowMenu(!showMenu)}>
+              Experience -
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contact Me -</Link>
+            <Link href="/contact" onClick={() => setShowMenu(!showMenu)}>
+              Contact Me -
+            </Link>
           </li>
           <li>
-            <Link href="/about-me">About Me -</Link>
+            <Link href="/about-me" onClick={() => setShowMenu(!showMenu)}>
+              About Me -
+            </Link>
           </li>
         </ul>
       </nav>
@@ -76,7 +82,7 @@ export const Header = () => {
           <h3 className="text-secondary">Graduate Software Engineer</h3>
         </Link>
       </hgroup>
-      <Overlay showMenu={showMenu} />
+      <Overlay showMenu={showMenu} setShowMenu={setShowMenu}/>
       <Menu lines={3} showMenu={showMenu} setShowMenu={setShowMenu} />
     </header>
   );
