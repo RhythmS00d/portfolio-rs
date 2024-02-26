@@ -11,7 +11,7 @@ export default function RootLayout({
     <section className="p-4 flex flex-col gap-3 h-full justify-between">
       <menu className="flex flex-col items-center w-full mb-3">
         <dt className="text-2xl font-semibold text-name_heading">
-          Let's start a conversation
+          Let&apos;s start a conversation
         </dt>
         <dd className="w-full flex flex-col items-center mt-2">
           <ul className="flex items-center justify-around w-full p-2">

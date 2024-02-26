@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { FaThumbsUp } from "react-icons/fa";
 import "animate.css"
 
-export default function page() {
+export default function Success() {
   const [startAnimation, setStartAnimation] = useState(false)
   return (
     <div className="flex flex-col items-center justify-center overflow-hidden">

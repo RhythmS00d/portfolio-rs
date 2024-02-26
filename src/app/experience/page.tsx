@@ -15,13 +15,14 @@ export default function experience() {
       className="size-[30px]"
       color="white"
       title="Javascript"
+      key={101}
     />,
-    <FaJava className="size-[30px]" color="white" title="Java" />,
-    <FaDocker className="size-[30px]" color="white" title="Docker" />,
-    <FaReact className="size-[30px]" color="white" title="React" />,
-    <FaRust className="size-[30px]" color="white" title="Rust" />,
-    <FaSwift className="size-[30px]" color="white" title="Swift" />,
-    <FaAws className="size-[30px]" color="white" title="AWS" />,
+    <FaJava className="size-[30px]" color="white" title="Java" key={201} />,
+    <FaDocker className="size-[30px]" color="white" title="Docker" key={301} />,
+    <FaReact className="size-[30px]" color="white" title="React" key={401} />,
+    <FaRust className="size-[30px]" color="white" title="Rust" key={501} />,
+    <FaSwift className="size-[30px]" color="white" title="Swift" key={601} />,
+    <FaAws className="size-[30px]" color="white" title="AWS" key={701} />,
   ];
 
   const ibm_desc = `I engineered a responsive frontend interface for a
