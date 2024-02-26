@@ -37,7 +37,7 @@ const Overlay = ({ showMenu, setShowMenu }: { showMenu: boolean; setShowMenu: (v
   return (
     <section
       className={
-        "absolute h-1/4 bg-secondary w-[60%] right-0 z-10 top-[112px] origin-top-right " +
+        "absolute h-1/3 bg-secondary w-[60%] right-0 z-10 top-[104px] origin-top-right " +
         `${
           showMenu ? "scale-100 animate-openMenu" : "scale-0 animate-closeMenu"
         }`
@@ -75,7 +75,7 @@ export const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <header className="container p-[1.5em] bg-primary h-28 flex items-center justify-between">
+    <header className="container p-[1.5em] bg-primary max-h-28 flex items-center justify-between">
       <hgroup>
         <Link href="/">
           <h1 className="text-2xl text-primary font-bold">Rhythm Sood</h1>

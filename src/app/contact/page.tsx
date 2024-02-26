@@ -1,17 +1,19 @@
+import { redirect } from "next/navigation";
 import React from "react";
 
 export default function page() {
+  let submitText = "Send";
+
   async function handleFormSubmit() {
     "use server";
 
-    console.log("submitted");
+    redirect("/contact/success")
   }
 
-  const inputStyle =
-    "rounded-md px-2 py-3 shadow-sm shadow-[#373535]";
+  const inputStyle = "rounded-md px-2 py-3 shadow-sm shadow-[#373535]";
 
   return (
-    <section className="p-4 flex flex-col gap-3">
+    <>
       <h1 className="text-2xl font-bold">Contact Me</h1>
       <form action={handleFormSubmit} className="flex flex-col gap-3">
         <ul className="flex flex-col gap-4">
@@ -21,6 +23,7 @@ export default function page() {
               name="name"
               id="name"
               placeholder="Name"
+              required
               className="w-full outline-none"
             />
           </li>
@@ -30,6 +33,7 @@ export default function page() {
               name="email"
               id="email"
               placeholder="Email"
+              required
               className="w-full outline-none"
             />
           </li>
@@ -40,6 +44,8 @@ export default function page() {
               cols={30}
               rows={5}
               placeholder="Enter Message here"
+              required
+              minLength={20}
               className="w-full outline-none"
             ></textarea>
           </li>
@@ -48,9 +54,9 @@ export default function page() {
           type="submit"
           className="w-24 h-10 bg-button text-white font-semibold text-lg flex items-center justify-center rounded-md"
         >
-          Send
+          {submitText}
         </button>
       </form>
-    </section>
+    </>
   );
 }

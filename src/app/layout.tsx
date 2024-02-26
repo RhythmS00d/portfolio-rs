@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " relative"}>
+      <body className={inter.className + " lg:relative flex flex-col justify-between min-h-dvh"}>
         <Header />
         {children}
         <a href="#" className="hidden lg:block lg:absolute lg:bottom-[110px] lg:right-4 lg:bg-primary lg:rounded-full">

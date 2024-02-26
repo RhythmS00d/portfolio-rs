@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="w-full h-20 bg-primary flex items-center justify-center flex-col">
+    <footer className="w-full min-h-20 bg-primary flex items-center justify-center flex-col">
       <span className="text-white font-sans font-bold">&copy; Copyright</span>
       <span className="text-white font-light text-sm">
         Made by Rhythm Sood

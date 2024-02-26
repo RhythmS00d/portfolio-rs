@@ -7,3 +7,7 @@
     margin-left: clamp(2px, 2vw, 10px);
     width: 100%;
 }
+
+.animate__animated.animate__backOutRight {
+  --animate-duration: 2s;
+}

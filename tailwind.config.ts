@@ -15,7 +15,7 @@ const config: Config = {
       backgroundColor: {
         primary: "#373535",
         secondary: "#FF8F27",
-        white: "#EAEAEA",
+        white: "#F3F3F3",
         button: "#279CF2",
       },
       textColor: {
@@ -36,6 +36,9 @@ const config: Config = {
           "0%": { transform: "scale(1)" },
           "100%": { transform: "scale(0)" },
         },
+      },
+      minWidth: {
+        expCard: "calc(290px * 2)",
       },
     },
   },
